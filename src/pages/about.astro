@@ -1,0 +1,22 @@
+---
+import Schools from "../components/Schools.astro"
+import Layout from "../layouts/Layout.astro"
+const schoolboard = "Stanley School District"
+const schools = ['Ripleys School', 'Stone Lake School', 'Hannilbal Public School']
+---
+
+<Layout title="About">
+    <h1>SchoolBundle</h1>
+    <h3>Websites for School Districts</h3>
+    <p>{schoolboard}</p>
+    <ul>
+        <!-- {schools.map(schools => <li>schools</li>)} -->
+        {schools.map(schools => <Schools schools={schools} />)}
+    </ul>
+</Layout>
+
+<script>
+    document.getElementById('m-button')?.addEventListener('click', () => {
+        console.log(123)
+    })
+</script>
